@@ -1,0 +1,50 @@
+@use 'variables' as v; 
+@use 'mixins' as m; 
+
+.footer{
+    background-color:#EAE4E3;
+    font-weight:600;
+    padding:3.6rem;
+    margin-top:6rem;
+    text-align:center;
+    font-family:v.$Fuente;
+    @include m.tablet{
+        @include m.grid(3, 2rem);
+    }
+
+    &__texto{
+        cursor:pointer;
+        margin-top:4rem;
+        @include m.tablet{
+            @include m.grid(3, 0)
+        }
+    }
+    &__enlaces{
+        font-size:1.3rem;
+        line-height:1.7;
+        font-weight:400;
+
+        &:hover{
+            color:v.$cyan;
+        }
+    }
+
+    &__imagen{
+        margin:0 auto;
+
+        @include m.tablet{
+            margin:unset;
+        }
+    }
+
+    &__redes{
+        display:flex;
+        flex-direction:row;
+        justify-content: center;
+        align-items: center;
+        gap:3rem;
+        margin-top:3rem;
+        cursor:pointer;
+    }
+
+}

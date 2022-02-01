@@ -1,0 +1,88 @@
+@use 'variables' as v; 
+@use 'mixins' as m; 
+
+.header{
+    font-family:v.$Fuente;
+    text-align:center;
+    padding:3.5rem;
+    background-image: url(../images/bg-header-mobile.png);
+    background-repeat:no-repeat;
+    background-size:cover;
+
+    @include m.tablet{
+        background-image:url(../images/bg-header-desktop.png);
+    }
+
+    &__grid{
+        display:flex;
+        flex-direction:column;
+    }
+
+    &__imagen{
+        width:40%;
+        margin:0 auto;
+        padding-bottom:3rem;
+
+        @include m.tablet{
+            width:10%;
+        }
+    }
+    &__heading{
+        font-size:2.7rem;
+        width:50%;
+        margin:0 auto;
+        font-weight:600;
+
+        @include m.tablet{
+            font-size:3.4rem;
+        }
+    }
+    &__botonn{
+        display:block;
+        font-size:1.5rem;
+        margin-top:3rem;
+        border-radius:4rem;
+        padding:1.5rem 4rem;
+        background-color:v.$cyan;
+        color:#fff;
+        cursor:pointer;
+
+        @include m.tablet{
+            display:inline;
+            margin-left:3rem;
+            margin-top:2rem;
+        }
+    }
+    &__boton{
+        display:block;
+        font-size:1.5rem;
+        margin-top:3rem;
+        border-radius:4rem;
+        padding:1.5rem 4rem;
+        background-color:v.$azul;
+        color:#fff;
+        cursor:pointer;
+
+        @include m.tablet{
+            display:inline;
+            margin-left:3rem;
+            margin-top:2rem;
+        }
+    }
+
+    &__texto{
+        padding-top:2rem;
+        font-size:2rem;
+        color:v.$cyan;
+        width:65%;
+        margin:0 auto;
+        line-height:1.5;
+        margin-bottom:5rem;
+
+        @include m.tablet{
+            width:55%;
+            font-size:2rem;
+        }
+    }
+
+}
